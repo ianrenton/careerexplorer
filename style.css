@@ -1,0 +1,172 @@
+/* Overall */
+html, body, div#map { 
+    width:100%; 
+    height:100%; 
+    margin:0; 
+    overflow: hidden;
+    font-family: 'Exo 2', Arial, sans-serif;
+    background-color: #012;
+}
+
+/* Layout */
+div#top {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+div#bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 0.5em;
+    z-index: 990;
+    text-align: center;
+    font-size: 1.6em;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+div#left {
+    position: absolute;
+    top: 6em;
+    left: 0;
+    z-index: 994;
+    padding: 1em;
+    display: none;
+}
+div#leftFader {
+    display: none;
+    padding: 0 1em;
+}
+div#right {
+    width: 20em;
+    position: absolute;
+    top: 6em;
+    right: 0;
+    z-index: 995;
+    padding: 1em;
+    display: none;
+}
+
+/* Panel, text & images */
+div.panel {
+    font-size: 14px;
+    background-color: rgba(22, 33, 49, 0.8);
+    border: 1px solid rgba(120, 200, 255, 1);
+    color: rgba(120, 200, 255, 1);
+    box-sizing: border-box;
+    display: inline-block;
+    font-weight: 100;
+    letter-spacing: .06em;
+    z-index: 1000;
+}
+div#leftFaderContent {
+    color: rgba(120, 200, 255, 1);
+    max-width: 40em;
+}
+h2, h3, h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+a, a:visited {
+    color: white;
+}
+img.photo {
+    width: 18em;
+    display: none;
+}
+
+/* Numeric metrics */
+.metric {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .06em;
+    border: 1px solid rgba(120, 200, 255, .4);
+    color: rgba(120, 200, 255, .8);
+    height: 5.5em;
+    width: 5.5em;
+    margin: 0.5em 0 0.5em 0.3em;
+    padding: 0.4em;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.metric-value {
+    margin-top: .4em;
+    font-size: 2em;
+    font-weight: bold;
+}
+.metric-label {
+    font-size: .8em;    
+}
+
+/* Map display */
+div.iconLabel { 
+    padding-left: 40px;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+/* Buttons and panel hiders */
+button {
+    background-color: rgba(120, 200, 255, .6);
+    border: 1px solid rgba(120, 200, 255, .2);
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: .06em;
+    margin: 1px; 
+    padding: .4em 1em;
+    font-family: 'Exo 2', Arial, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button#intro {
+    margin-bottom: 1.5em;
+}
+div.hiderLeft {
+    text-align: left;
+    margin-top: 1em;
+}
+div.hiderRight {
+    text-align: right;
+    margin-top: 1em;
+}
+
+/* Target lock */
+div.targetLock { 
+    padding-left: 40px; 
+    padding-top: 1.6em;
+}
+button.targetLock {
+    background-color: rgba(120, 0, 0, .9);
+    border: 1px solid rgba(255, 120, 120, .4);
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 600px) {
+    div#left, div#right {
+        padding: 0.4em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    button#intro {
+        display: none;
+    }
+    .metric {
+        font-size: 10px;
+        margin: 0.2em 0 0.2em 0em;
+        padding: 0.4em;
+    }
+    span.lllayout {
+        display: none;
+    }
+}
+
+/* Leaflet.js mods */
+.leaflet-container .leaflet-control-attribution {
+    background: none;
+}
