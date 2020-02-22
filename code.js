@@ -9,7 +9,7 @@ mapLayer.addTo(map);
 seamarkLayer.addTo(map);
 
 // Symbol class definition
-var MILSTDIcon = L.Icon.extend({ options: { iconAnchor: [30, 30] } });
+var MILSTDIcon = L.Icon.extend({ options: { className: 'icon', iconAnchor: [30, 30] } });
 
 // Entity class definition
 class Entity {
@@ -58,6 +58,16 @@ var entities = [
     new Entity(50.4689, -2.1547, "MILCO 3", "SHUPWMG-----", "<h3>Mine Countermeasures</h3><p>I have domain expertise in a variety of MCM techniques, drawn from over a decade working on mine-hunting and mine-sweeping systems, both for unmanned vehicles and larger ships.</p><img src='./photos/mine.jpg' class='photo'/>"),
     new Entity(50.4278, -2.4582, "MILCO 2 [N]", "SHUPWMGD----", "<h3>Mine Countermeasures</h3><p>I have domain expertise in a variety of MCM techniques, drawn from over a decade working on mine-hunting and mine-sweeping systems, both for unmanned vehicles and larger ships.</p><img src='./photos/undex.jpg' class='photo'/>"),
     new Entity(50.3849, -2.7438, "MILCO 1 [N]", "SHUPWMGD----", "<h3>Mine Countermeasures</h3><p>I have domain expertise in a variety of MCM techniques, drawn from over a decade working on mine-hunting and mine-sweeping systems, both for unmanned vehicles and larger ships.</p><img src='./photos/undex.jpg' class='photo'/>"),
+    new Entity(47, -13, "Glider", "SFUPSU------", "<h3>Glider Operations</h3><p>I have worked with naval and academic experts to develop the use of gliders for ocean monitoring.</p>"),
+    new Entity(50, -4.3, "Unmanned Surface Vehicle", "SFSPCUS-----", ""),
+    new Entity(49.9, -4.2, "POSSUB1", "SHUPS1------", ""),
+    new Entity(49.8, -4.5, "POSSUB3", "SHUPS3------", ""),
+    new Entity(50.6, -0.6, "[Automated Collision Avoidance]", "SFSPCU------", "<h3>Automated Collision Avoidance</h3><p>As well as developing my company's automated collision avoidance behaviours, I have worked with internal, national and international bodies to help shape the future of safe operation of unmanned maritime systems.</p><img src='./photos/radar.jpg' class='photo'/>"),
+    new Entity(50.53, -0.45, "", "SUSPXMC-----", ""),
+    new Entity(55.5007599,-4.8818987, "[System of Systems]", "SFSPCUM-----", "<h3>System of Systems Concepts</h3><p>A portion of my R&D work concerns the 'system of systems' concept, developing ways in which different assets such as ships, surface vehicles and underwater vehicles can work together to achieve their goals.</p>"),
+    new Entity(55.5661126,-4.88161, "", "SFSPCMMH----", ""),
+    new Entity(55.4711521,-4.805393, "", "SFUPSUM-----", ""),
+    new Entity(55.4686974,-4.9309775, "", "SFUPSUM-----", ""),
 
     new Entity(82, 7, "", "99rb", "<iframe width='250' src='https://www.youtube.com/embed/hIIVK0NgK38?&autoplay=1' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>")
 ];
@@ -89,10 +99,18 @@ for (e of entities) {
     }
 }
 
-// Add polylines for specific things
-var arrow = L.polyline([[50.44, -2.3], [50.47, -2.25]], {color: '#84E3FF'}).addTo(map);
-var arrowHead = L.polylineDecorator(arrow, {
+// Add polylines for moving vessels
+var a1 = L.polyline([[50.44, -2.3], [50.47, -2.25]], {color: '#84E3FF'}).addTo(map);
+L.polylineDecorator(a1, {
     patterns: [{offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true, color: '#84E3FF'}})}]
+}).addTo(map);
+var a2 = L.polyline([[50.6, -0.6], [50.589, -0.575], [50.560, -0.575], [50.525, -0.5]], {color: '#84E3FF'}).addTo(map);
+L.polylineDecorator(a2, {
+    patterns: [{offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true, color: '#84E3FF'}})}]
+}).addTo(map);
+var a3 = L.polyline([[50.53, -0.45], [50.555, -0.5]], {color: '#FFA1FF'}).addTo(map);
+L.polylineDecorator(a3, {
+    patterns: [{offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true, color: '#FFA1FF'}})}]
 }).addTo(map);
 
 // Add pan event to update lat/lon display at bottom of screen, and run once on startup

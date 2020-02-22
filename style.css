@@ -104,11 +104,16 @@ img.photo {
 }
 
 /* Map display */
-div.iconLabel { 
+img.icon {
+    z-index: 900 !important;
+}
+div.iconLabel {
     padding-left: 40px;
     font-size: 1.2em;
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    cursor: grab;
+    z-index: 890 !important;
 }
 
 /* Buttons and panel hiders */
@@ -143,6 +148,7 @@ div.targetLock {
 button.targetLock {
     background-color: rgba(120, 0, 0, .9);
     border: 1px solid rgba(255, 120, 120, .4);
+    cursor: grab;
 }
 
 /* Mobile responsiveness */
