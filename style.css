@@ -64,6 +64,9 @@ div.panel {
 }
 div#leftFaderContent {
     color: rgba(120, 200, 255, 1);
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: .06em;
     max-width: 40em;
 }
 h2, h3, h4 {
