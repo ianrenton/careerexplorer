@@ -124,7 +124,7 @@ $("div#procs").click(function(){
 });
 $("div#langs").click(function(){
     $("div#leftFader").show("fade", 500);
-    $("div#leftFaderContent").html("<h3>Programming Languages</h3><p>I experience in the following languages:</p><ul><li>Java</li><li>LabVIEW</li><li>MATLAB</li><li>Ruby</li><li>JavaScript</li><li>Python</li><li>C</li><li>C++</li><li>PHP</li></ul>");
+    $("div#leftFaderContent").html("<h3>Programming Languages</h3><p>I have experience in the following languages:</p><ul><li>Java</li><li>LabVIEW</li><li>MATLAB</li><li>Ruby</li><li>JavaScript</li><li>Python</li><li>C</li><li>C++</li><li>PHP</li></ul>");
 });
 $("div#packgs").click(function(){
     $("div#leftFader").show("fade", 500);
