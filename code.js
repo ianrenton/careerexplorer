@@ -69,7 +69,7 @@ var entities = [
     new Entity(55.4711521,-4.805393, "", "SFUPSUM-----", ""),
     new Entity(55.4686974,-4.9309775, "", "SFUPSUM-----", ""),
 
-    new Entity(82, 7, "", "99rb", "<iframe width='250' src='https://www.youtube.com/embed/hIIVK0NgK38?&autoplay=1' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>")
+    new Entity(82, 7, "", "99rb", "<iframe width='250' src='https://www.youtube.com/embed/hiwgOWo7mDc?&autoplay=1' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>")
 ];
 
 // Add entities to map: icon with popup if set, plus label if set.
