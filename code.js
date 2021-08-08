@@ -3,7 +3,7 @@ var map = L.map('map', { zoomControl: false })
 map.setView([50.6, -2.0], 10);
 
 // Add layers
-var mapLayer = L.tileLayer('https://api.mapbox.com/styles/v1/ianrenton/ck6weg73u0mvo1ipl5lygf05t/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaWFucmVudG9uIiwiYSI6ImNraGt6Z2UxcTAyY2wyd214NGg3NzR5aGQifQ.ewfUzf5-mnd_JUSCmYkVMA');
+var mapLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png');
 var seamarkLayer = L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png');
 mapLayer.addTo(map);
 seamarkLayer.addTo(map);
